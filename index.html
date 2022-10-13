@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cervical Cancer</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Load d3-cloud -->
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+  <!-- Range slider code -->
+  <script src="https://cdn.rawgit.com/RasmusFonseca/d3RangeSlider/master/d3RangeSlider.js"></script>
+
+  <!-- Range slider style -->
+  <link href="https://cdn.rawgit.com/RasmusFonseca/d3RangeSlider/master/d3RangeSlider.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <h1>Cervical Cancer Visualizations</h1>
+    <h2>Scrollytelling of Cervical Cancer Risk Factors. Filterable by age.</h2>
+    <div class="div-text">
+      <p>The dataset <strong>“Cervical Cancer VS Demographic, Habits, MedHistory” </strong>contains information about
+        858 different
+        patients diagnosed with cervical cancer and factors that may have caused this disease.
+        The dataset was collected at <strong>'Hospital Universitario de Caracas'</strong> in Caracas, Venezuela and
+        should emphasize the
+        necessity of preventive measures regarding cervical cancer.</p>
+      <p>We decided to use this dataset because cervical cancer isn’t discussed as much as we think it should. It
+        affects lots of people, although it could be <strong>prevented or diagnosed</strong> earlier more often. Even in
+        Austria,
+        especially young people, aren’t informed as much about this disease and its causes, preventions and symptoms.
+      </p>
+      <p>You can use the latch to adjust for what <strong>age range</strong> you want insights in further
+        visualiations.</p>
+    </div>
+
+
+    <div class="viz-div">
+      <div class="text-col">
+        <h2>Agerange of patients</h2>
+        <p>The following chart represents the <strong>age</strong> of the participants of the study.</p>
+        <p>
+          The interesting thing about our data set is that there are patients in a wide variety of age groups. <br>
+          This allows us to let the viewer of the visualization explore for himself at which age which risk factors are more
+          prominent and from which age the risk for cervical cancer generally rises and falls.</p>
+          <p>You can use the latch to adjust for what <strong>age range</strong> you want insights in further
+            visualiations.</p>
+      </div>
+      <div class="viz-col">
+        <svg id="histogramm"></svg>
+        <div id="slider">
+          <div id="slider-container"></div>
+          <div id="range-label">13 - 84</div>
+        </div>
+      </div>
+    </div>
+    <div id="viz2" class="viz-div">
+      <div class="viz-col">
+        <svg id="wordcloud"></svg>
+      </div>
+      <div class="text-col-right">
+        <h2>Riskfactors</h2>
+        <p>The wordcloud illustrates the major <strong>risk factors</strong> associated with cervical cancer 
+          - smoking, IUDs, STIs, birth control pills, and multiple sexual partners.</p>
+        <p>
+          The more prominent - or rather bigger - a word is, the greater 
+          its impact as a risk factor for cervical cancer. <br>
+          This is due to the fact that more participants - who were diagnosed with 
+          cervical cancer - are or were exposed to the risk factor.
+        </p>
+        <p>
+          Through hovering above one of the words a tooltip appears with the exact number of people. 
+        </p>
+      </div>
+
+    </div>
+    <div id="viz3" class="viz-div">
+      <div class="text-col">
+        <h2>Checkups done</h2>
+        <p>These two circles show the amount of people who <strong>did do checkups</strong> vs the people who 
+          <strong>didn't do checkups</strong>. As these exams can help with detecting cervical cancer quite early, 
+          we think it is important to emphasize the contrast in size between these two groups.</p>
+        <p>Can you guess which bubble represents which group of people?</p>
+        <p><strong>Hover</strong> over them to find out if you are right!</p>
+      </div>
+      <div class="viz-col">
+        <svg id="circles"></svg>
+      </div>
+    </div>
+    <div id="viz4" class="viz-div">
+      <div class="viz-col">
+        <svg id="donutchart"></svg>
+      </div>
+      <div class="text-col-right">
+        <h2>Checkups distribution</h2>
+        <p>The donut chart is an extension of the one pie chart above, which represents 
+          the number of examinations performed before the participants got their diagnosis.<br>
+          The donut chart is intended to give deeper insight into <strong>which</strong> of the <strong>four examinations</strong>
+          was done <strong>how often</strong>. </p>
+        <p>
+          An examination for cervical cancer includes cytological screening, biopsy and 
+          colposcopy. The latter consists of four stages, the last two of which are the 
+          Hinselmann and Schiller tests. <br>
+          All four check-up types are represented here.
+        </p>
+        <p>
+          Through hovering above one of the sections in the donut chart a tooltip will appear 
+          that shows the exact number of people who did the certain examination. 
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="footer">
+      Source: Data from <a
+        href="https://www.kaggle.com/datasets/loveall/cervical-cancer-risk-classification">kaggle.com</a>
+    </div>
+    <div id="tooltip"></div>
+  </div>
+
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

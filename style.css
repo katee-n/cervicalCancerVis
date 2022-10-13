@@ -1,0 +1,183 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+  background-image: url(assets/bg.jpeg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#app {
+  font-family: 'Poppins', sans-serif;
+  color: #342e2e;
+  margin-top: 30px;
+  padding: 8px;
+  letter-spacing: -0.011em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 600;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 20px;;
+}
+h2{
+  text-align: center;
+}
+.div-text{
+  width: 70vw;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.viz-div {
+  height: 600px;
+  width: 80vw;
+  margin: 50px;
+  background: rgba( 255, 255, 255, 0.15 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+display: flex;
+
+
+}
+.text-col, .text-col-right{
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.27 );
+  width:25%;
+  padding: 40px;
+  text-align: justify;
+
+}
+.text-col{
+  border-radius: 10px 0px 0px 10px;
+}
+.text-col-right{
+  border-radius: 0px 10px 10px 0px;
+}
+
+.viz-col{
+  width:75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider-container {
+  width:800px;
+  position: relative;
+  height: 30px;
+  margin: 10px 30px 30px 30px;
+}
+.slider-container{
+  background-color: #eeeef566;
+  border-radius: 5px;
+
+}
+
+.slider{
+  background-color: #5466B6;
+  border-radius: 5px;
+}
+#range-label{
+ text-align: center;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer a {
+  color: #2c3e50;
+}
+
+/* Marks */
+.point:hover {
+  stroke: #333;
+}
+
+.bar {
+  shape-rendering: crispEdges;
+}
+
+.bar:hover {
+  stroke: #777;
+}
+
+.bar.active {
+  stroke: #333;
+}
+
+/* Axes */
+.axis line {
+  fill: none;
+  stroke: #ddd;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 12px;
+  color: #2c2828b5;
+}
+
+.axis-title {
+  font-size: 12px;
+  color: #2c2828b5;
+}
+
+.y-axis .tick:first-child line {
+  stroke: #b1b1b1;
+}
+
+.y-axis .tick:first-child text {
+  display: none;
+}
+
+.x-axis .tick:first-child line {
+  display: none;
+}
+
+.axis path {
+  display: none;
+}
+
+
+/* Tooltip */
+#tooltip {
+  position: absolute;
+  opacity: 0;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border: 1px solid #ddd;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px;
+  min-width: 160px;
+  color: #333;
+}
+
+.tooltip-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#tooltip ul {
+  margin: 5px 0 0 0;
+  padding-left: 20px;
+}
